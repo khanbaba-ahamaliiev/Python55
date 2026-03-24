@@ -2,8 +2,10 @@ print("task1")
 
 print("git")
 
-def new_func():
-    print("task2")
-# мы витерли и записали новое
+#снова стерли и добавили
+# чтобы вызвать ошибку
+print("hello world")
 
 print("task2")
+
+print("hello mistake")
