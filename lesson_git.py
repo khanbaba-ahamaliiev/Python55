@@ -10,6 +10,7 @@
 # git commit -m "сообщение"
 
 
+
 def funnc(num1, num2):
     return 1 + 2
 
@@ -18,3 +19,7 @@ import math
 
 print(math.pi)
 print(funnc(1, 2))
+
+
+def new_func(text):
+    print(text)
