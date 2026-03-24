@@ -4,7 +4,7 @@
 h = int(input("Enter a height: "))
 s = input("Enter a symbol: ")
 
-for _ in range(1,h+1):
+for _ in range(1, h + 1):
     formula = s * _
     print(formula)
 
@@ -46,10 +46,9 @@ while True:
 number = n1 * 1000 + n2 * 100 + n3 * 10 + n4
 secret_number = str(number)
 
-print(secret_number) #- якщо потрібно перевірити що за число загадане
+print(secret_number)  # - якщо потрібно перевірити що за число загадане
 
 while True:
-
     answer = input("Enter a number: ")
     bulls = 0
     cows = 0
@@ -134,5 +133,3 @@ for i in range(h):
             print(" " * nothing + s)
         else:
             print(" " * nothing + s + " " * (2 * formula - 1) + s)
-
-

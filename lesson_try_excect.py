@@ -14,8 +14,7 @@ except ValueError:
 except ZeroDivisionError:
     print("Please enter a number")
 
-except Exception: # если случится любая ошибка
+except Exception:  # если случится любая ошибка
     print("помилка")
 
 print("the end")
-

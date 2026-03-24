@@ -50,4 +50,3 @@ if RX_ALLOWED.fullmatch(user_name):
     print("OK")
 else:
     print("NO")
-

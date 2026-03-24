@@ -1,9 +1,8 @@
-
-#for in
+# for in
 
 # for <variable> in <container>:
-#.... code
-#.... code
+# .... code
+# .... code
 
 line = "у разі вибору пункту 4"
 
@@ -14,18 +13,18 @@ for i in line:
 # range(start, stop) - от старта до стопа
 # range(stop) - от 0 до стопа
 # range(start, stop, step) - от старта до стопа с определенным шагом
-r1 = range(2,10,2) # 2, 4, 6, 8
-r2 = range(10,2,-2) # 10, 8, 6, 4
+r1 = range(2, 10, 2)  # 2, 4, 6, 8
+r2 = range(10, 2, -2)  # 10, 8, 6, 4
 
-for i in range(10,2,-2): # покажет 10, 8, 6, 4
+for i in range(10, 2, -2):  # покажет 10, 8, 6, 4
     print(i)
 
-for i in range(5): # 5 раз напишет hello
+for i in range(5):  # 5 раз напишет hello
     print("hello")
 
 
-for i in range(1,11): # - делает табличку умножения
-    for j in range(1,11):
+for i in range(1, 11):  # - делает табличку умножения
+    for j in range(1, 11):
         print(i * j, end="\t")
     print()
 
@@ -37,7 +36,7 @@ for i in range(1,11): # - делает табличку умножения
 
 facterial = int(input("Enter a factorial: "))
 n = 1
-for i in range(1, facterial+1):
+for i in range(1, facterial + 1):
     n *= i
 print(n)
 
@@ -48,7 +47,7 @@ print(n)
 # *******
 
 leigh = int(input("Enter a leigh: "))
-for i in range(1, leigh+1):
+for i in range(1, leigh + 1):
     print("*", end="")
 
 # for _ in range(1, leigh+1): - правило хорошего тона если і негде больше не используется можно ставить _
@@ -65,7 +64,7 @@ for i in range(1, leigh+1):
 
 line = ""
 width = int(input("Enter a width: "))
-for i in range(1, width+1):
+for i in range(1, width + 1):
     line += "&"
 print(line)
 

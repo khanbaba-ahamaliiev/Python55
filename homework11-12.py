@@ -18,7 +18,9 @@ lifecell = 1
 vodafone = 1.4
 kievstar = 1.2
 
-from_op = input("виберіть оператора з якого телефонуєте (lifecell, vodafone, kievstar): ")
+from_op = input(
+    "виберіть оператора з якого телефонуєте (lifecell, vodafone, kievstar): "
+)
 to_op = input("виберіть оператора на який телефонуєте (lifecell, vodafone, kievstar): ")
 duration = int(input("Введіть тривалість розмови в хвилинах: "))
 
@@ -97,13 +99,19 @@ salary_manager3 = 200 + sales_from_manager3 * per_manager3
 
 if salary_manager1 > salary_manager2 and salary_manager1 > salary_manager3:
     salary_manager1 += 200
-    print(f"Найкращий менеджер 1\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}")
+    print(
+        f"Найкращий менеджер 1\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}"
+    )
 elif salary_manager2 > salary_manager3:
     salary_manager2 += 200
-    print(f"Найкращий менеджер 2\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}")
+    print(
+        f"Найкращий менеджер 2\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}"
+    )
 else:
     salary_manager3 += 200
-    print(f"Найкращий менеджер 3\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}")
+    print(
+        f"Найкращий менеджер 3\n зарплата 1 менеджера: {salary_manager1}\n зарплата 2 менеджера: {salary_manager2}\n зарплата 3 менеджера: {salary_manager3}"
+    )
 # Завдання 5
 # Користувач вводить суму кредиту і термін (у роках). Програма визначає
 # процентну ставку і розраховує загальну суму до виплати:
@@ -172,8 +180,12 @@ fruits = 4
 discount = 0
 
 meal1 = int(input("виберіть закуски(0-2): \n0.Нічого \n1.Салат – 5$ \n2.Суп – 7$  "))
-meal2 = int(input("виберіть основні страви(0-2): \n0.Нічого \n1.Курка – 10$ \n2.Риба – 12$."))
-meal3 = int(input("виберіть Десерти(0-2): \n0.Нічого \n1.Морозиво – 3$, \n2.Фрукти – 4$."))
+meal2 = int(
+    input("виберіть основні страви(0-2): \n0.Нічого \n1.Курка – 10$ \n2.Риба – 12$.")
+)
+meal3 = int(
+    input("виберіть Десерти(0-2): \n0.Нічого \n1.Морозиво – 3$, \n2.Фрукти – 4$.")
+)
 
 status = int(input("ви постійний клієнт(1) чи ви у нас вперше(2): "))
 if 0 <= meal1 <= 2 and 0 <= meal2 <= 2 and 0 <= meal3 <= 2:
@@ -213,7 +225,7 @@ if meal1 == soup and meal2 == fish and meal3 != 0:
 elif meal2 == chicken and meal3 == icecream:
     free_drink = 1
 
-last_price = (meal1 + meal2 + meal3) * (1-discount)
+last_price = (meal1 + meal2 + meal3) * (1 - discount)
 print(f"загальна вартість зі знижкою складає {last_price}")
 if free_drink == 1:
     print("до вашого замовлення додався безкоштовний напій")

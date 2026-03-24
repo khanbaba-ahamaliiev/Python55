@@ -2,7 +2,6 @@
 # Щороку ваша компанія надає різним державним організаціям фінансову звітність.
 # Залежно від організації формати звітності різні. Використовуючи механізм декораторів,
 # вирішіть питання звітності для організацій.
-import functools
 def validate_data(data):
     year, income, expenses, profit, tax, tax_rate, net_profit = data
 
@@ -26,7 +25,9 @@ def report_for_tax(func):
             f"Податок ({tax_rate * 100:.1f}%): {tax:.2f}\n"
             f"Чистий прибуток: {net_profit:.2f}\n"
         )
+
     return wrapper
+
 
 def report_for_ministry(func):
     def wrapper(*args, **kwargs):
@@ -40,6 +41,7 @@ def report_for_ministry(func):
             f"Витрати: {expenses:.2f}\n"
             f"Чистий прибуток: {net_profit:.2f}\n"
         )
+
     return wrapper
 
 
@@ -55,6 +57,7 @@ def report_for_statistics(func):
             f"Витрати: {expenses:.2f}\n"
             f"Прибуток до оподаткування: {profit:.2f}\n"
         )
+
     return wrapper
 
 
@@ -96,7 +99,7 @@ def main():
     print(tax_report(year, income, expenses, tax_rate))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 # Аудит дій користувача
@@ -105,12 +108,11 @@ if __name__ == '__main__':
 # Використовуючи декоратори, реалізуйте аудит для таких функцій.
 from datetime import datetime
 
-
 journal = []
+
 
 def audit(func):
     def wrapper(*args, **kwargs):
-
         user = args[0]
         action = func.__name__
         time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -134,10 +136,10 @@ def create_data(user, data):
 def delete_data(user, data_id):
     print(f"Видалено запис з ID: {data_id}")
 
+
 @audit
 def change_data(user, data, data_id):
     print(f"Дані з ID: {data_id} змінено: {data}")
-
 
 
 def main():
@@ -161,9 +163,9 @@ if __name__ == "__main__":
 
 import time
 
+
 def rate_limit(max_calls, period):
     def decorator(func):
-
         count = 0
         start_time = 0
 
@@ -172,15 +174,12 @@ def rate_limit(max_calls, period):
 
             now = time.time()
 
-
             if start_time == 0:
                 start_time = now
-
 
             if now - start_time > period:
                 count = 0
                 start_time = now
-
 
             if count >= max_calls:
                 print("Ліміт перевищено!")
@@ -190,6 +189,7 @@ def rate_limit(max_calls, period):
             return func(user, *args)
 
         return wrapper
+
     return decorator
 
 

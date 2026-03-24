@@ -6,13 +6,15 @@
 n1 = int(input("Enter a number: "))
 n2 = int(input("Enter another number: "))
 
+
 def dobutok(n1, n2):
     if n1 > n2:
         n1, n2 = n2, n1
     inner_n = 1
-    for i in range(n1, n2+1):
+    for i in range(n1, n2 + 1):
         inner_n *= i
     return inner_n
+
 
 print(dobutok(n1, n2))
 
@@ -22,8 +24,10 @@ print(dobutok(n1, n2))
 # Список передається як параметр.
 ls = [9, 2, 7, 4, 5]
 
+
 def find_max(ls: list):
     print(max(ls))
+
 
 find_max(ls)
 # Завдання 3
@@ -31,9 +35,9 @@ find_max(ls)
 # Список передається як параметр.
 ls = [9, 2, 7, 4, 5]
 
+
 def summa_in_list(ls: list):
     print(sum(ls))
 
+
 summa_in_list(ls)
-
-

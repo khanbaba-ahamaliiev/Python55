@@ -35,16 +35,18 @@ questions = [
     "Чи є в тебе секрет, який ніхто не знає?",
     "Кого ти востаннє обговорював(-ла)?",
     "Яка твоя найбільша незручна ситуація?",
-    "У кого з присутніх ти б хотів(-ла) помінятися життям?"
-             ]
+    "У кого з присутніх ти б хотів(-ла) помінятися життям?",
+]
 
 dares = [
     "Заспівай улюблену пісню.",
     "Станцюй 30 секунд без музики.",
     "Розкажи смішний анекдот.",
     "Зроби 10 присідань.",
-    "Зобрази відому людину, щоб інші вгадали."
-         ]
+    "Зобрази відому людину, щоб інші вгадали.",
+]
+
+
 def get_player_names():
     """
     Отримує імена гравців від користувача.
@@ -55,6 +57,7 @@ def get_player_names():
     """
 
     return input("enter your names: ").strip().split()
+
 
 def ask_truth_or_dare(player):
     """
@@ -67,7 +70,7 @@ def ask_truth_or_dare(player):
         str: Вибір гравця ("Правда" або "Дія").
     """
 
-    answer = input(f"{player} \"Правда\" чи \"Дія\" ")
+    answer = input(f'{player} "Правда" чи "Дія" ')
 
     if answer in ["Правда", "Дія"]:
         return answer
@@ -90,10 +93,10 @@ def ask_truth_question(player):
         str: Відповідь гравця на питання.
     """
 
-
     question = random.choice(questions)
     answer = input(f"{player} {question}")
     return answer
+
 
 def perform_dare(player):
     """
@@ -130,6 +133,7 @@ def play_game(players):
         elif choice == "Дія":
             perform_dare(player)
 
+
 def main():
     """
     Точка входу в програму.
@@ -141,5 +145,6 @@ def main():
     players = get_player_names()
     play_game(players)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

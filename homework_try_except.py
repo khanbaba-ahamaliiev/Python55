@@ -1,5 +1,6 @@
 # Завдання 1
 
+
 def get_password():
     password = input("Enter a password: ")
 
@@ -10,6 +11,7 @@ def get_password():
         raise ValueError("Password must be unique")
 
     return password
+
 
 try:
     get_password()
@@ -22,11 +24,8 @@ except ValueError as e:
 
 # Завдання 2
 
-users_info = {
-    "user":"password",
-    "khan":"12345678",
-    "ivan":"ivan123"
-}
+users_info = {"user": "password", "khan": "12345678", "ivan": "ivan123"}
+
 
 def check_user():
     login = input("Enter a login: ")
@@ -38,6 +37,7 @@ def check_user():
 
     if password != users_info[login]:
         raise ValueError("Password does not match")
+
 
 try:
     check_user()

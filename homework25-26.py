@@ -4,19 +4,22 @@
 # "Don't compare yourself with anyone in this world…
 #     if you do so, you are insulting yourself."
 #         Bill Gates
-from dbm.sqlite3 import error
 
 
 def text():
-    print("\"Don't compare yourself with anyone in this world… \n\tif you do so, you are insulting yourself.\"\n\t\tBill Gates")
+    print(
+        '"Don\'t compare yourself with anyone in this world… \n\tif you do so, you are insulting yourself."\n\t\tBill Gates'
+    )
+
 
 text()
+
 
 # Завдання 2
 # Напишіть функцію, яка приймає два числа як параметр і відображає всі парні
 # числа між ними.
 def range_of_numbers(n1, n2):
-    for n in range(n1+1, n2):
+    for n in range(n1 + 1, n2):
         if n % 2 == 0:
             print(n, end=", ")
     print()
@@ -26,6 +29,7 @@ n1 = 10
 n2 = 20
 
 range_of_numbers(n1, n2)
+
 
 # Завдання 3
 # Напишіть функцію, яка відображає порожній або заповнений квадрат з деякого
@@ -55,8 +59,10 @@ square(6, "*", False)
 # Напишіть функцію, яка повертає мінімальне з п'яти чисел.
 # Числа передаються як параметри))
 
+
 def find_min(n1, n2, n3, n4, n5):
     return min(n1, n2, n3, n4, n5)
+
 
 print(find_min(10, 20, 33, 4, 5))
 
@@ -65,8 +71,10 @@ print(find_min(10, 20, 33, 4, 5))
 # як параметр. З функції потрібно повернути отриману кількість цифр.
 # Наприклад, якщо передали 3456, кількість цифр буде 4.
 
+
 def amount_of_numbers(number):
     return len(str(number))
+
 
 number = int(input("Enter a number: "))
 print(amount_of_numbers(number))
@@ -80,10 +88,12 @@ print(amount_of_numbers(number))
 # (перша частина 123, друга 321, яка після перевороту стає 123), 546645 —
 # паліндром, а 421987 — не паліндром.
 
+
 def padindrom(number):
     if str(number) == str(number)[::-1]:
         return True
     else:
         return False
+
 
 print(padindrom(30103))

@@ -14,44 +14,29 @@
 
 nums = (1, 2, 3, 4)
 
+
 def get_statistic():
     count = 5
     average = 10.5
 
-    return count, average # - возвращает кортеж
+    return count, average  # - возвращает кортеж
+
 
 # enumerate
 
-words = ['apple', 'banana', 'orange', 'pear', 'cherry']
+words = ["apple", "banana", "orange", "pear", "cherry"]
 
-for i in range (len(words)):
+for i in range(len(words)):
     word = words[i]
 
     print(i, word)
 
-for i, word in enumerate(words, start=1): # - одно и тоже с тем что сверху
+for i, word in enumerate(words, start=1):  # - одно и тоже с тем что сверху
     print(i, word)
 
 
-item = ['bread', 'milk', 'cheese']
+item = ["bread", "milk", "cheese"]
 prices = [30, 70, 150]
 
-for pair in zip(item, prices):
+for pair in zip(item, prices, strict=False):
     print(pair)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -12,7 +12,7 @@ filename = input("Enter file name: ")
 name = input("Enter a name: ")
 age = int(input("Enter your age: "))
 
-with open(filename+".txt", "w") as file:
+with open(filename + ".txt", "w") as file:
     file.write(f"{name} is {age} years old")
 
 # Завдання 3
@@ -61,16 +61,19 @@ with open("test.txt", "w", encoding="UTF-8") as file:
 
 # Завдання 6
 
+
 def add_numbers(text, numbers):
     numbers = [str(num) + "\n" for num in numbers]
     with open(text, "a", encoding="UTF-8") as file:
         file.write(f"{numbers}")
+
 
 def read_file(filename):
     with open(filename, encoding="UTF-8") as file:
         text = file.read()
         numbers = text.split("\n")
         return numbers
+
 
 add_numbers("test.txt", [1, 2, 3, 4, 5])
 

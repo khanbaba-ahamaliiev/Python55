@@ -1,5 +1,6 @@
 # Завдання 1
 
+
 def connector(dict1, dict2):
     new_dict = {}
     for key in dict1:
@@ -14,10 +15,11 @@ def connector(dict1, dict2):
     return new_dict
 
 
-data1 = {"key1":1, "key2":2}
-data2 = {"key2":3, "key4":4}
+data1 = {"key1": 1, "key2": 2}
+data2 = {"key2": 3, "key4": 4}
 
 print(connector(data1, data2))
+
 
 # Завдання 2
 def reverser(dict):
@@ -27,13 +29,13 @@ def reverser(dict):
 
     return reverso_dict
 
-data = reverser({"key1":1, "key2":2})
+
+data = reverser({"key1": 1, "key2": 2})
 print(data)
 
 # Завдання 3
 data = {}
 while True:
-
     item = input("enter items name: ")
 
     if item == "":
@@ -62,6 +64,7 @@ print(f"{'Загальна ціна':<15} | {total:>10.2f}")
 
 # Завдання 4
 
+
 def text_converter(text, rate=False):
     word_count = {}
 
@@ -77,15 +80,17 @@ def text_converter(text, rate=False):
 
     return word_count
 
+
 python = """Python is a popular programming language. Python is
  easy to learn and Python is powerful. Many developers use Python
-  for web development, data analysis, and automation. Learning 
+  for web development, data analysis, and automation. Learning
   Python helps developers create useful programs."""
 
 print(text_converter(python))
 
 
 # Завдання 5
+
 
 def add_student(groups, group_name, student_name):
     if group_name in groups:
@@ -116,7 +121,7 @@ def show_groups(groups):
 student_groups = {
     "group101": ["anna", "mark", "olena", "ivan"],
     "group525": ["taras", "sofia", "maksym"],
-    "group112": ["nazar", "daria", "andrii", "iryna"]
+    "group112": ["nazar", "daria", "andrii", "iryna"],
 }
 
 add_student(student_groups, "group525", "john")
@@ -124,6 +129,7 @@ del_student(student_groups, "group112", "daria")
 show_groups(student_groups)
 
 # Завдання 6
+
 
 def ask_user():
     user_info = {}
@@ -138,6 +144,7 @@ def ask_user():
 
     return user_info
 
+
 def ask_another_users():
     five_users_info = {}
 
@@ -146,5 +153,6 @@ def ask_another_users():
         five_users_info[info["name"]] = info
 
     return five_users_info
+
 
 print(ask_another_users())

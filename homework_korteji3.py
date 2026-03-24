@@ -32,6 +32,7 @@ def deposit(data):
     else:
         data[name] = money
 
+
 def withdraw(data):
     name = input("enter user name: ")
 
@@ -51,6 +52,7 @@ def withdraw(data):
     else:
         data[name] -= money
 
+
 def main():
     bank_data = {}
 
@@ -69,5 +71,7 @@ def main():
             print("option not found")
 
         print(bank_data)
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     main()

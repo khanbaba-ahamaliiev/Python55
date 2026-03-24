@@ -1,6 +1,5 @@
 import random
 
-
 user_data = input("enter numbers separated by a comma")
 new_nums = []
 if user_data == "":
@@ -32,7 +31,7 @@ for i, num in enumerate(new_nums):
     print(i, num)
 
 
-students_name = ("jane", "john", "doe", "jack", "mary" )
+students_name = ("jane", "john", "doe", "jack", "mary")
 while True:
     name_check = input("enter student name: ").lower()
 
@@ -60,12 +59,11 @@ movie_lib = (
     "mad max: fury road",
     "parasite",
     "dune",
-    "oppenheimer")
-
+    "oppenheimer",
+)
 
 
 while True:
-
     movie_check = input("enter movie name: ").lower()
 
     if movie_check == "":
@@ -83,8 +81,6 @@ while True:
         print("не правильна назва, спробуй ще раз")
 
 
-
-
 def fruit_finder(tup, name):
     count_fr = 0
 
@@ -94,17 +90,16 @@ def fruit_finder(tup, name):
         if name_check in fruit.lower():
             count_fr += 1
 
-
     return count_fr
 
-print(fruit_finder(("яблуко", "яблуко Сидоренко", "банан жовтий", "Яблуко"), "Яблуко" ))
+
+print(fruit_finder(("яблуко", "яблуко Сидоренко", "банан жовтий", "Яблуко"), "Яблуко"))
 
 
 def amount_numbers(tup):
     one_num = 0
     two_num = 0
     three_num = 0
-
 
     new_ls = list(map(str, tup))
 
@@ -121,8 +116,8 @@ def amount_numbers(tup):
     двоцифрових – {two_num} шт
     трицифрових – {three_num} шт""")
 
-numbers = (3, 15, 7, 123, 88, 456, 9, 42, 100, 5)
 
+numbers = (3, 15, 7, 123, 88, 456, 9, 42, 100, 5)
 
 
 amount_numbers(numbers)
@@ -130,7 +125,5 @@ amount_numbers(numbers)
 items = tuple(input("enter your items: ").split(", "))
 prices = tuple(input("enter your price: ").split(", "))
 
-for item, price in zip(items, prices):
+for item, price in zip(items, prices, strict=False):
     print(item, price)
-
-

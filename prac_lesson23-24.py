@@ -1,7 +1,4 @@
-import random
-
-
-ls = [2, 9, 4, -4, 8, 5, -3, 7, 5, 5] # [random.randint(-10,10) for i in range(10)]
+ls = [2, 9, 4, -4, 8, 5, -3, 7, 5, 5]  # [random.randint(-10,10) for i in range(10)]
 print(ls)
 
 sum_neg = 0
@@ -42,7 +39,7 @@ for i in range(1, len(ls)):
 print(max_val, min_val)
 
 prod_between = 1
-for i in range(min_i+1, max_i):
+for i in range(min_i + 1, max_i):
     prod_between *= ls[i]
 
 print(prod_between)

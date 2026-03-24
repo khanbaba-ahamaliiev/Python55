@@ -1,6 +1,5 @@
 import random
 
-
 # Завдання 1
 # Є кортеж з назвами міст. Виведіть ті міста, які
 # зустрічаються в кортежі більше одного разу.
@@ -17,7 +16,7 @@ cities = (
     "odesa",
     "poltava",
     "sumy",
-    "dnipro"
+    "dnipro",
 )
 
 shown = []
@@ -38,7 +37,7 @@ print(tup2)
 
 for num in tup1:
     if num not in tup2:
-        print(num, end=' ')
+        print(num, end=" ")
 
 print()
 
@@ -47,13 +46,15 @@ print()
 # список з елементами, які є в обох кортежах і мають однакові
 # індекси. Підказка: використайте zip()
 
+
 def same_elements(tup1, tup2):
     result = []
-    for a, b in zip(tup1, tup2):
+    for a, b in zip(tup1, tup2, strict=False):
         if a == b:
             result.append(a)
 
     return result
+
 
 t1 = (1, 2, 3, 4, 5)
 t2 = (1, 7, 3, 8, 5)

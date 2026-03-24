@@ -139,4 +139,3 @@ while True:
     add = football_players[players_position].append(new_player)
 
     print(football_players)
-

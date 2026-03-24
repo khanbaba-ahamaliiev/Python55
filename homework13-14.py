@@ -74,7 +74,9 @@ while i <= end:
 start = int(input("Enter start number: "))
 end = int(input("Enter end number: "))
 interval = int(input("Enter interval: "))
-choice = int(input("Виберіть порядок виведення: 1.у прямому або 2.зворотному порядку: "))
+choice = int(
+    input("Виберіть порядок виведення: 1.у прямому або 2.зворотному порядку: ")
+)
 
 if choice == 1:
     i = start

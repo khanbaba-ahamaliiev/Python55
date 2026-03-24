@@ -1,27 +1,24 @@
-
-filename = "test.txt" # ищет в той же папке
+filename = "test.txt"  # ищет в той же папке
 # так же можно добавить путь в папке и абсолютный путь к файлу
 
-file = open(filename) # открывает файл
+file = open(filename)  # открывает файл
 
 # print(file)
 # print(type(file))
 
-text = file.read() # чтобы прочитать файл
+text = file.read()  # чтобы прочитать файл
 
 print(text)
 print(repr(text))
 
 
-file.close() # чтобы закрыть файл
+file.close()  # чтобы закрыть файл
 
 # для избегания проблем с повреждением файла
 # рекомендуют делать так:
 
 # with open("test.txt") as file:
 #           [code]
-
-
 
 
 # прочитать файл как строки:

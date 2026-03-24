@@ -33,6 +33,3 @@ print(line_t)
 
 print(line_t.values)
 print(line_t.strings)
-
-
-

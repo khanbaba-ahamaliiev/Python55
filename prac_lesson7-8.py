@@ -1,4 +1,4 @@
-def create_grid(size: int = 3) :
+def create_grid(size: int = 3):
     """
     Створює і повертає порожню сітку для гри «Хрестики-нулики».
 
@@ -8,7 +8,10 @@ def create_grid(size: int = 3) :
     """
 
     return [[" " for _ in range(size)] for _ in range(size)]
+
+
 print(create_grid())
+
 
 def print_grid(grid: list[list[Cell]]) -> None:
     """
@@ -22,9 +25,7 @@ def print_grid(grid: list[list[Cell]]) -> None:
     print("    " + " | ".join(grid[1]))
     print(" ---+---+---")
     print("    " + " | ".join(grid[2]))
+
+
 board = create_grid()
 print_grid(print_grid(board))
-
-
-
-

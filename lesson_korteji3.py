@@ -1,12 +1,12 @@
 # Словари - сохраняет данные парами и без индексов - {ключ:значение}
 
-    # значение может быть что угодно
-    # ключи сохраняются в множестве
+# значение может быть что угодно
+# ключи сохраняются в множестве
 
-        # Последствия:
-            # 1. не может быть дубликатов
-            # 2. нету порядка
-            # 3. ключи хешируются и нельзя использовать изменяемые типы данных(list, set, dict)
+# Последствия:
+# 1. не может быть дубликатов
+# 2. нету порядка
+# 3. ключи хешируются и нельзя использовать изменяемые типы данных(list, set, dict)
 
 
 data = {
@@ -16,7 +16,7 @@ data = {
 }
 
 client = "Mary"
-balance = data[client] # - чтобы получить значение ключа
+balance = data[client]  # - чтобы получить значение ключа
 
 print(balance)
 
@@ -28,36 +28,33 @@ data["John"] += 200
 print(data["John"])
 
 
-
 data = {"хлеб": 30, "яблоки": 65}
 
-data["хлеб"] = 35 # изменить значение
+data["хлеб"] = 35  # изменить значение
 print(data)
 
-data["молоко"] = 80 # добавить новую пару
+data["молоко"] = 80  # добавить новую пару
 print(data)
 
-data.pop("хлеб") # удалить пару
+data.pop("хлеб")  # удалить пару
 print(data)
 
 
-
-for items in data: # получаем ключи
+for items in data:  # получаем ключи
     print(items)
 
-print(data.values()) # чтобы получить только значения
+print(data.values())  # чтобы получить только значения
 
 for price in data.values():
     print(price)
 
-for item, price in data.items(): # чтобы получить пары
+for item, price in data.items():  # чтобы получить пары
     print(item, price)
 
-if "молоко" in data: # проверка есть ли ключ в словаре
+if "молоко" in data:  # проверка есть ли ключ в словаре
     print("yes")
 else:
     print("no")
-
 
 
 # ЗАДАЧКА С РАБОТНИКАМИ
@@ -69,6 +66,7 @@ def create_worker_info():
     worker_info["experience"] = int(input("enter worker's experience: "))
 
     return worker_info
+
 
 # info = create_worker_info()
 #
@@ -83,6 +81,7 @@ def create_workers(workers_num=3):
 
     return workers
 
+
 # workers = create_workers()
 # print(workers)
 
@@ -96,8 +95,7 @@ def increase_salary(workers, bonus, min_exp=2):
         if worker["experience"] > min_exp:
             worker["salary"] += bonus
 
+
 workers = create_workers(workers_num=3)
 increase_salary(workers, bonus=250)
 print(workers)
-
-

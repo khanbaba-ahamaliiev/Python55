@@ -20,7 +20,7 @@ match x:
         print("середнє число: 5-7")
     case 8:
         print("8")
-    case _: # - все остальные значения
+    case _:  # - все остальные значения
         print("other")
 
 x = None
@@ -47,7 +47,7 @@ match x:
 # guard
 years = int(input("Enter a number: "))
 match years:
-    case y if y <1:
+    case y if y < 1:
         print("no award")
     case y if 1 <= y < 3:
         print("award 5%")
@@ -55,8 +55,6 @@ match years:
         print("award 10%")
     case y if y > 5:
         print("no award 15%")
-
-
 
 
 import math
@@ -72,7 +70,7 @@ c = int(input("Enter another number: "))
 # D = 0 - 1 решение
 # D < 0 - нету решений
 
-D = (b ** 2) - 4 * a * c
+D = (b**2) - 4 * a * c
 
 
 if D > 0:
@@ -86,7 +84,6 @@ elif D < 0:
     print("немає коренів")
 else:
     print("помилка")
-
 
 
 salary = float(input("Enter your salary: "))
@@ -103,6 +100,3 @@ elif work_year < 5:
 else:
     bonus = salary * 0.15
     print(f"award: {bonus}")
-
-
-

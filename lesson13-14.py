@@ -1,4 +1,3 @@
-
 # while
 
 # while <cond>:
@@ -32,7 +31,6 @@ while i <= 5:
 #     data += "\n"
 # print(data)
 # print("the end")
-
 
 
 # i = 1
@@ -85,7 +83,6 @@ while i <= 5:
 #     i += 1
 
 
-
 # h = 10
 # w = 10
 # i = 1 # - делает треугольник
@@ -99,6 +96,3 @@ while i <= 5:
 #         j += 1
 #     print()
 #     i += 1
-
-
-

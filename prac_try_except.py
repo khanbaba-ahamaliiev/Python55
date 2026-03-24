@@ -1,11 +1,7 @@
 products = ["apple", "banana", "cherry", "milk"]
 
 try:
-    print(
-        products[
-            int(input("Please enter a index of product: "))
-        ]
-    )
+    print(products[int(input("Please enter a index of product: "))])
 
 except IndexError:
     print("error unexist")
@@ -74,7 +70,7 @@ catalog = {
     "ноутбуки": {"MacBook Air", "Lenovo ThinkPad", "Asus ROG"},
     "аксесуари": {"чохол для телефона", "павербанк", "мишка USB", "iPhone 15"},
     "ігрові": {"Asus ROG", "PlayStation 5", "Xbox Series X"},
-    "преміум": {"iPhone 15", "MacBook Air", "PlayStation 5"}
+    "преміум": {"iPhone 15", "MacBook Air", "PlayStation 5"},
 }
 
 categories = input("Please enter a valid categories:").split(", ")

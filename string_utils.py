@@ -1,12 +1,12 @@
 def delete_punc(string):
-    ls = [",",".", "?", "!", ";", ":"]
+    ls = [",", ".", "?", "!", ";", ":"]
     for char in string:
         if char in ls:
             string = string.replace(char, "")
     return string
 
-def sum_vowels(string):
 
+def sum_vowels(string):
     vowels = "aeiouAEIOU"
     sum_vowels = 0
 
@@ -16,18 +16,17 @@ def sum_vowels(string):
 
     return sum_vowels
 
+
 def palindrome(string):
     string_pal = string.lower().replace(" ", "")
     return string_pal == string_pal[::-1]
 
-if __name__ == '__main__':
-    print(delete_punc('wcw.owpo!'))
-    print(sum_vowels('wcaw.owpo!'))
-    print(palindrome('wca w.oWp o!'))
-    print(palindrome('wowow'))
 
-
-
+if __name__ == "__main__":
+    print(delete_punc("wcw.owpo!"))
+    print(sum_vowels("wcaw.owpo!"))
+    print(palindrome("wca w.oWp o!"))
+    print(palindrome("wowow"))
 
 
 import math
@@ -38,9 +37,9 @@ def triangle_Square(a, b, angle):
     S = 0.5 * (a * b) * math.sin(radians)
     return S
 
-print(triangle_Square(3,4,45))
-print(triangle_Square(3,4,90))
 
+print(triangle_Square(3, 4, 45))
+print(triangle_Square(3, 4, 90))
 
 
 import time
@@ -50,14 +49,14 @@ def count_time(n=10):
     start = time.time()
     sum_num = 0
 
-    for n in range(1, n+1):
+    for n in range(1, n + 1):
         sum_num += n
     end = time.time()
 
     return end - start
 
-print(count_time())
 
+print(count_time())
 
 
 import datetime
@@ -70,7 +69,5 @@ def count_year(date):
 
     return (age.days) / 365
 
+
 print(count_year(input("Enter your birth date: ")))
-
-
-

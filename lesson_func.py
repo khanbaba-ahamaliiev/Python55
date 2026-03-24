@@ -1,5 +1,6 @@
 # Документация
 
+
 def get_greeting(name: str, age: int) -> str | None:
     """
     формирует и возвращает приветствие для пользователя
@@ -14,7 +15,7 @@ def get_greeting(name: str, age: int) -> str | None:
     :param name: str
     :param age: int
     :return: str
-    """ # <--- docstring
+    """  # <--- docstring
     if age <= 0:
         print("age must be greater than 0")
         return None
@@ -30,6 +31,7 @@ def get_greeting(name: str, age: int) -> str | None:
     greeting = f"Hello, {name}! You are {age} years old!"
     return greeting
 
+
 greeting = get_greeting("John", 19)
 print(greeting)
 
@@ -37,17 +39,15 @@ print(greeting)
 help(get_greeting)
 
 
-
 def greet_users(users: list):
-    '''
+    """
     Выводит приветствие для каждого пользователя со списка
 
     см. get_greeting()
 
     :param users: list[list]
     :return:
-    '''
-
+    """
 
     for user in users:
         name = user[0]
@@ -59,14 +59,9 @@ def greet_users(users: list):
             print(greeting)
 
 
-
-users = [["John", 46],
-         ['Sophie', 35],
-         ["Mary", 31],
-         ['wmrovor', -10]]
+users = [["John", 46], ["Sophie", 35], ["Mary", 31], ["wmrovor", -10]]
 
 greet_users(users)
-
 
 
 # Хрестики нолики
@@ -76,8 +71,7 @@ greet_users(users)
 # 4. проверка кто выиграл
 
 
-from typing import Literal, Optional
-
+from typing import Literal
 
 Symbol = Literal["X", "O"]
 Cell = Literal["X", "O", " "]  # " " — порожня клітинка
@@ -94,6 +88,7 @@ def create_grid(size: int = 3) -> list[list[Cell]]:
 
     return [[" " for _ in range(size)] for _ in range(size)]
 
+
 def print_grid(grid: list[list[Cell]]) -> None:
     """
     Виводить поточний стан сітки на екран у зручному для читання вигляді.
@@ -109,11 +104,9 @@ def print_grid(grid: list[list[Cell]]) -> None:
         if i < size - 1:
             print("---+" * (size - 1) + "---")
 
+
 def add_symbol_to_grid(
-    grid: list[list[Cell]],
-    row: int,
-    col: int,
-    symbol: Symbol
+    grid: list[list[Cell]], row: int, col: int, symbol: Symbol
 ) -> bool:
     """
     Додає новий символ на сітку за вказаними координатами.
@@ -133,6 +126,7 @@ def add_symbol_to_grid(
             return True
 
     return False
+
 
 def ask_user_move(player_name: str, grid: list[list[Cell]]) -> tuple[int, int]:
     """
@@ -171,7 +165,7 @@ def ask_user_move(player_name: str, grid: list[list[Cell]]) -> tuple[int, int]:
         return row, col
 
 
-def check_winner(grid: list[list[Cell]]) -> Optional[Symbol]:
+def check_winner(grid: list[list[Cell]]) -> Symbol | None:
     """
     Перевіряє, чи є переможець на поточній сітці.
 
@@ -234,7 +228,9 @@ def is_game_over(grid: list[list[Cell]]) -> bool:
     :return: bool - True, якщо гра завершена, False інакше.
     """
 
-    if check_winner(grid) is not None or check_winner(grid) is not has_empty_cells(grid):
+    if check_winner(grid) is not None or check_winner(grid) is not has_empty_cells(
+        grid
+    ):
         return True
 
 
@@ -247,6 +243,7 @@ def switch_player(player: Symbol) -> Symbol:
     """
 
     return "O" if player == "X" else "X"
+
 
 def main() -> None:
     """
@@ -287,8 +284,5 @@ def main() -> None:
 
         current_player = switch_player(current_player)
 
+
 main()
-
-
-
-

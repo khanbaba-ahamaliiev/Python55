@@ -1,6 +1,6 @@
 # Завдання 1
 
-with open("homework_files.txt", "r", encoding="UTF-8") as file:
+with open("homework_files.txt", encoding="UTF-8") as file:
     text = file.read().lower()
     print(text)
 
@@ -29,7 +29,7 @@ with open("homework_files_task1.txt", "w", encoding="UTF-8") as file:
 spec_word = input("enter your word: ")
 filename = input("enter your filename.txt: ")
 
-with open(filename, "r", encoding="UTF-8") as file:
+with open(filename, encoding="UTF-8") as file:
     text = file.read().lower().replace("\n", "")
     print(text)
 
@@ -44,11 +44,9 @@ print(f"Кількість {spec_word} у файлі {filename} : {amount_spec_w
 
 # Завдання 3
 
-with open("homework_files.txt", "r", encoding="UTF-8") as file:
+with open("homework_files.txt", encoding="UTF-8") as file:
     text = file.readlines()
     text = text[:-1]
 
 with open("homework_files.txt", "w", encoding="UTF-8") as file:
     file.writelines(text)
-
-

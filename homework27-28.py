@@ -3,13 +3,13 @@
 # Приклад:
 # • Введення: 123
 # • Виведення: 6 (оскільки 1+2+3=6).
-from contextlib import nullcontext
 
 
 def summa(n):
     if n == 0:
         return 0
     return n % 10 + summa(n // 10)
+
 
 number = int(input("Enter a number: "))
 
@@ -22,21 +22,23 @@ print(summa(number))
 # Введення: [1,2,3,2,1]
 # • Висновок: "Список симетричний".
 
+
 def simetrical(ls):
     if len(ls) <= 1:
         return True
 
     if ls[0] != ls[-1]:
-            return False
+        return False
 
     return simetrical(ls[1:-1])
+
 
 ls = list(int(i) for i in input("Enter a list: ").split())
 
 if simetrical(ls):
-        print("Список симетричний")
+    print("Список симетричний")
 else:
-        print("Список не симетричний")
+    print("Список не симетричний")
 
 # Завдання 4
 # Написати гру "Бики та корови". Програма "загадує" чотирицифрове число і гравець має вгадати його.
@@ -45,6 +47,7 @@ else:
 # вивести кількість зроблених користувачем спроб. У програмі необхідно використовувати рекурсію.
 
 import random
+
 
 def secret_number():
     numbers = list("1234567890")
@@ -57,12 +60,10 @@ def secret_number():
 
 
 def play(secret, attempts):
-
     guess = input("Guess a number: ")
     if len(guess) != 4:
         print("need 4 numbers")
         return play(secret, attempts)
-
 
     attempts += 1
     bull = 0

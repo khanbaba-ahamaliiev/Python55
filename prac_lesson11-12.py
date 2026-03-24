@@ -214,7 +214,7 @@ else:
 
 a = int(input("Введіть a: "))
 b = int(input("Введіть b: "))
-c  =int(input("Введіть c: "))
+c = int(input("Введіть c: "))
 
 S = a + b + c
 
@@ -224,6 +224,6 @@ else:
     avg = S / 3
 print(f"Середнє:{avg}")
 if isinstance(avg, float):
-    print(f"Тип: float")
+    print("Тип: float")
 elif isinstance(avg, int):
     print("Тип: int")

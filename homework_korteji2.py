@@ -1,11 +1,7 @@
 # Завдання 1
 # Користувач вводить через кому список товарів. Виведіть
 # цей список на екран, але без повторень назв товарів
-items = list(
-    set(
-        input('enter your items: '.lower()).split(", ")
-    )
-)
+items = list(set(input("enter your items: ".lower()).split(", ")))
 
 print(items)
 
@@ -19,6 +15,7 @@ print(items)
 #  Імена шахраїв, які скористались знижкою, але магазин
 # не давав їм купони
 
+
 def clients_discount(earned_ls, used_ls):
     earned_discount = set(earned_ls)
     used_discount = set(used_ls)
@@ -26,8 +23,11 @@ def clients_discount(earned_ls, used_ls):
     earned_nouse = earned_discount.difference(used_discount)
     scammers = used_discount.difference(earned_discount)
 
-    print("Не скористались купоном:", list(earned_nouse), "Кількість:", len(earned_nouse))
+    print(
+        "Не скористались купоном:", list(earned_nouse), "Кількість:", len(earned_nouse)
+    )
     print("Шахраї:", list(scammers))
+
 
 clients_with_coupons = ["anna", "ivan", "maria", "oleh"]
 clients_used = ["ivan", "maria", "petro"]

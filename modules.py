@@ -3,6 +3,7 @@
 модуль тестовый
 
 """
+
 from math import pi
 
 
@@ -13,7 +14,7 @@ def get_circle_area(radius: float) -> float:
     :param radius: радиус круга
     :return: площадь круга
     """
-    return pi * radius ** 2
+    return pi * radius**2
 
 
 def get_circle_perimetr(radius: float) -> float:
@@ -24,6 +25,7 @@ def get_circle_perimetr(radius: float) -> float:
     :return: периметр круга
     """
     return 2 * pi * radius
+
 
 if __name__ == "__main__":
     print("hello from modules")

@@ -1,6 +1,6 @@
-round(12.2, 3)#- округливает
+round(12.2, 3)  # - округливает
 
-#условия
+# условия
 
 # if elif else
 
@@ -13,7 +13,6 @@ round(12.2, 3)#- округливает
 # 3 or
 
 
-
 # if <condition>:
 #     <code...>
 # elif <condition>:
@@ -21,7 +20,7 @@ round(12.2, 3)#- округливает
 # else :
 #   <code...>
 
-age=15
+age = 15
 
 if age >= 18:
     print("You are old enough.")

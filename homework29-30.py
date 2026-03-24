@@ -28,6 +28,7 @@ for n in make_lowercase:
 
 print(result)
 
+
 # Завдання 2. Вищі функції: фабрика фільтрів для студентів
 # Є список студентів у вигляді словників.
 # Вхід:
@@ -60,6 +61,7 @@ def min_avg(lst):
     print(min)
     return min
 
+
 def max_age(lst):
     max = 0
     for i in lst:
@@ -70,7 +72,8 @@ def max_age(lst):
     print(max)
     return max
 
-def no_debts_only(lst): #
+
+def no_debts_only(lst):  #
     while True:
         for i in lst:
             if i["debts"] == "False":
@@ -82,13 +85,12 @@ def no_debts_only(lst): #
 # def make_student_filter(min_avg, max_age, no_debts_only):
 
 
-
 students = [
     {"name": "Іра", "age": 17, "avg": 91, "has_debt": False},
     {"name": "Петро", "age": 19, "avg": 73, "has_debt": True},
     {"name": "Оля", "age": 18, "avg": 88, "has_debt": False},
-    {"name": "Максим", "age": 20, "avg": 60, "has_debt": False}
-    ]
+    {"name": "Максим", "age": 20, "avg": 60, "has_debt": False},
+]
 min_avg(students)
 max_age(students)
 
