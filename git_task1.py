@@ -2,7 +2,8 @@ print("task1")
 
 print("git")
 
-def f():
-    print("f")
-def g():
-    print("g")
+def new_func():
+    print("task2")
+# мы витерли и записали новое
+
+print("task2")
