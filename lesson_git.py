@@ -20,6 +20,5 @@ print(math.pi)
 print(funnc(1, 2))
 
 
-
 def new_func(text):
     print(text)
