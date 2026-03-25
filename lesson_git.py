@@ -9,17 +9,14 @@
 # обьеденяем изменения в одну версию и добавляем "сообщение"
 # git commit -m "сообщение"
 
+# отправить комит на гитхаб
+# git push
 
+# создать папку
+# mkdir folder
 
-def funnc(num1, num2):
-    return 1 + 2
+# перейти на папку
+# cd folder
 
-
-import math
-
-print(math.pi)
-print(funnc(1, 2))
-
-
-def new_func(text):
-    print(text)
+# вернутся на прошлую папку
+# cd ..
