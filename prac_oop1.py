@@ -19,15 +19,19 @@ students.append(student3)
 for student in students:
     student.show_info()
 
+
 class Circle:
     def __init__(self, radius):
         self.radius = radius
 
-    def get_area(self):
+    def show_area(self):
         print(f"S = {3.14*(self.radius)**2}")
 
 circle1 = Circle(5)
-circle1.get_area()
+circle1.show_area()
+
+circle2 = Circle(7)
+circle2.show_area()
 
 class BankAccount:
     def __init__(self, owner, balance):
@@ -43,7 +47,7 @@ class BankAccount:
             self.balance -= amount
 
     def show_info(self):
-        print(f"{self.owner.name}'s balance is {self.balance}")
+        print(f"{self.owner}'s balance is {self.balance}")
 
 user = BankAccount("John", 100)
 user.deposit(50)
@@ -71,6 +75,11 @@ class Car:
     def show_info(self):
         print(f"car brand: {self.brand} year: {self.year} ready: {self.is_ready}")
 
-car = Car("toyota", 2021)
-car.start_engine()
-car.move()
+car1 = Car("toyota", 2021)
+car1.start_engine()
+car1.move()
+car1.show_info()
+
+car2 = Car("mersedes", 2017)
+car2.move()
+car2.show_info()
