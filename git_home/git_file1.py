@@ -5,5 +5,10 @@ text = ("I enjoy learning new things every day.\n"
  i = 1+1+1+1
  print(i * 700)
  text = '12345'
+for letter in text:
+        print(letter)
+        letter = letter.lower()
+        letter = letter.upper()
+        print(letter)
 
 print(text)
