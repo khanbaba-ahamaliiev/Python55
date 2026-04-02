@@ -140,3 +140,70 @@ for worker in workers:
         continue
 
     print(worker.get_salary())
+
+
+# Завдання 3
+class Car:
+    def __init__(self, speed:int):
+        self._speed = speed
+        self.check_speed()
+
+    def move(self):
+        print(f"їде по шосе зі швидкістю {self._speed}")
+
+    def check_speed(self):
+        if 20 < self._speed < 200:
+            raise ValueError("не правильна швидкість")
+
+
+class Bicycle:
+    def __init__(self, speed:int):
+        self._speed = speed
+        self.check_speed()
+
+    def move(self):
+        print(f"їде по дорозі зі швидкістю {self._speed}")
+
+    def check_speed(self):
+        if 10 < self._speed < 30:
+            raise ValueError("не правильна швидкість")
+
+
+class Boat:
+    def __init__(self, speed:int):
+        self._speed = speed
+        self.check_speed()
+
+    def move(self):
+        print(f"пливе по воді зі швидкістю {self._speed}")
+
+    def check_speed(self):
+        if 0 < self._speed < 50:
+            raise ValueError("не правильна швидкість")
+
+
+def create_vehicle():
+    vehicle_name = input("enter the vehicle's name: ")
+
+    if vehicle_name == "Bicycle":
+        speed = int(input("enter the speed: "))
+        return Bicycle(speed)
+    elif vehicle_name == "Car":
+        speed = int(input("enter the speed: "))
+        return Car(speed)
+    elif vehicle_name == "Boat":
+        speed = int(input("enter the speed: "))
+        return Boat(speed)
+    else:
+        print("invalid input")
+        return None
+
+vehicles = []
+for _ in range(3):
+    vehicles.append(create_vehicle())
+
+for vehicle in vehicles:
+    if vehicle is None:
+        print("vehicle is not in mood")
+        continue
+    vehicle.move()
