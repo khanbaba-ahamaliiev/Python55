@@ -1,5 +1,6 @@
 # Завдання 1
 import math
+from curses.ascii import isdigit
 
 
 class Rectangle:
@@ -207,3 +208,64 @@ for vehicle in vehicles:
         print("vehicle is not in mood")
         continue
     vehicle.move()
+
+
+# Завдання додаткове
+
+class Email:
+    def __init__(self, email_address:str):
+        self._email_address = email_address
+
+        self.email_check()
+
+    def email_check(self):
+        if self._email_address == "" or "@" not in self._email_address :
+            raise ValueError("invalid email")
+
+    def get_cost(self):
+        return 0
+    def send(self, message:str):
+        print(f"{self._email_address}: {message}")
+        print(f"cost: {self.get_cost()}")
+
+
+class SMS:
+    def __init__(self, phone_number:str):
+        self._phone_number = phone_number
+
+        self.phone_check()
+
+    def phone_check(self):
+        if isdigit(self._phone_number) or len(self._phone_number) > 160:
+            raise ValueError("invalid phone number")
+
+    def get_cost(self, message):
+        cost=0
+        if len(message) > 160:
+            cost = 2
+        else:
+            cost = 1
+
+        return cost
+
+    def send(self, message:str):
+        print(f"{self._phone_number}: {message}")
+        print(f"cost: {self.get_cost(message)}")
+
+
+class PushNotification:
+    def __init__(self, device_id:str):
+        self._device_id = device_id
+
+        self.phone_check()
+
+    def phone_check(self):
+         if len(self._device_id) > 60:
+            raise ValueError("invalid phone number")
+
+    def get_cost(self):
+        return 0.1
+
+    def send(self, message:str):
+        print(f"Push to device {self._device_id}: {message}")
+        print(f"cost: {self.get_cost()}")
