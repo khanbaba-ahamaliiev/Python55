@@ -99,6 +99,8 @@ class Paladin(Character):
 
 character = Paladin("Paladin", 5, 5, 5, 5, 5, defence=1)
 character.take_damage(5)
+character.level_up()
+character.shield()
 
 # Завдання 3
 # Створіть дочірній клас Mage
