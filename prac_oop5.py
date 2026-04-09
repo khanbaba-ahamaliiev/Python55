@@ -1,6 +1,14 @@
 from abc import ABC, abstractmethod
 from typing import List
+from enum import Enum
 
+
+class Stat(Enum):
+    intelligence = 'intelligence'
+    strength  = 'strength'
+    dexterity = 'dexterity'
+    mana = 'mana'
+    defense = 'defense'
 
 class Character(ABC):
     def __init__(
@@ -39,16 +47,16 @@ class Character(ABC):
         if self._level <= 20:
             self._level += 1
 
-    def increased_stat(self, stat:str):
-        if stat == 'Intelligence':
+    def increased_stat(self, stat:Stat):
+        if stat == Stat.intelligence:
             self._intelligence += 1
-        elif stat == 'Strength':
+        elif stat == Stat.strength:
             self._strength += 1
-        elif stat == 'Dexterity':
+        elif stat == Stat.dexterity:
             self._dexterity += 1
-        elif stat == 'Mana':
+        elif stat == Stat.mana:
             self._mana += 1
-        elif stat == 'Defence':
+        elif stat == Stat.defense:
             self._defence += 1
 
     def rest(self):
