@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 
 class Character(ABC):
@@ -120,3 +121,17 @@ class Mage(Character):
     def heal_ally(self, ally: Character):
         heal_hp = 3 + self._level + 3 * self._intelligence
         ally.heal(heal_hp)
+
+
+class Warrior(Character):
+    def attack(self):
+        return 4 * self._strength + 3
+
+    def power_strike(self, enemies:List[Character]):
+        for enemy in enemies:
+            if self._level > enemy._level:
+                enemies.remove(enemy)
+
+class Rogue(Character):
+    def attack(self):
+        return self._strength + self._level
