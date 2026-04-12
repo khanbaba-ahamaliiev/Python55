@@ -8,10 +8,10 @@ class Recipe:
     def __str__(self) -> str:
         return f"Страва: {self._name}"
 
-    def __contains__(self, item):
+    def __contains__(self, item) -> bool:
         return item in self._ingredients
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         return self._time > other._time
 
     def display_info(self):
