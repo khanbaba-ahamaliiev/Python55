@@ -14,8 +14,9 @@ def start_game():
             print("You won!")
             break
 
-    result = 'lose'
-    print("You lost!")
+    if secret not in answers:
+        result = 'lose'
+        print("You lost!")
 
 def generate_secret():
     return random.randint(1,100)
