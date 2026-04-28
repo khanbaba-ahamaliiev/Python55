@@ -12,11 +12,11 @@ def start_game():
         if answers[_] == secret:
             result = 'win'
             print("You won!")
-            break
+            return
 
-    if secret not in answers:
-        result = 'lose'
-        print("You lost!")
+
+    result = 'lose'
+    print("You lost!")
 
 def generate_secret():
     return random.randint(1,100)
