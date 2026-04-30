@@ -1,85 +1,85 @@
 import threading
 import json
-#
-# # Завдання 1
-# def find_min(nums, result):
-#     result['min'] = min(nums)
-#
-# def find_max(nums, result):
-#     result['max'] = max(nums)
-#
-# nums = list(map(int, input("enter numbers ").split(', ')))
-# result = {}
-#
-# thread1 = threading.Thread(target=find_min, args=(nums, result))
-# thread2 = threading.Thread(target=find_max, args=(nums, result))
-#
-# thread1.start()
-# thread2.start()
-#
-# thread1.join()
-# thread2.join()
-#
-# print(result)
-#
-#
-# # Завдання 2
-#
-# def find_sum(nums, result):
-#     result['sum'] = sum(nums)
-#
-# def find_average(nums, result):
-#     result['average'] = sum(nums) / len(nums)
-#
-# result = {}
-#
-# thread1 = threading.Thread(target=find_sum, args=(nums, result))
-# thread2 = threading.Thread(target=find_average, args=(nums, result))
-#
-# thread1.start()
-# thread2.start()
-#
-# thread1.join()
-# thread2.join()
-#
-# print(result)
-#
-# # Завдання 3
-#
-# def save_even(nums, filename= 'even.json'):
-#     even_nums = [num for num in nums if num % 2 == 0]
-#     with open(filename, 'w') as file:
-#         json.dump(even_nums, file)
-#
-# def save_odd(nums, filename= 'odd.json'):
-#     odd_nums = [num for num in nums if num % 2 != 0]
-#     with open(filename, 'w') as file:
-#         json.dump(odd_nums, file)
-#
-# def load_even(filename= 'even.json'):
-#     with open(filename, 'r') as file:
-#         even_nums = json.load(file)
-#
-#     print(f"even nums: {even_nums}")
-#
-# def load_odd(filename= 'odd.json'):
-#     with open(filename, 'r') as file:
-#         odd_nums = json.load(file)
-#
-#     print(f"odd nums: {odd_nums}")
-#
-#
-# thread1 = threading.Thread(target=save_even, args=(nums,))
-# thread2 = threading.Thread(target=save_odd, args=(nums,))
-#
-# thread1.start()
-# thread2.start()
-#
-# thread1.join()
-# thread2.join()
-#
-# load_even()
-# load_odd()
+
+# Завдання 1
+def find_min(nums, result):
+    result['min'] = min(nums)
+
+def find_max(nums, result):
+    result['max'] = max(nums)
+
+nums = list(map(int, input("enter numbers ").split(', ')))
+result = {}
+
+thread1 = threading.Thread(target=find_min, args=(nums, result))
+thread2 = threading.Thread(target=find_max, args=(nums, result))
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
+print(result)
+
+
+# Завдання 2
+
+def find_sum(nums, result):
+    result['sum'] = sum(nums)
+
+def find_average(nums, result):
+    result['average'] = sum(nums) / len(nums)
+
+result = {}
+
+thread1 = threading.Thread(target=find_sum, args=(nums, result))
+thread2 = threading.Thread(target=find_average, args=(nums, result))
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
+print(result)
+
+# Завдання 3
+
+def save_even(nums, filename= 'even.json'):
+    even_nums = [num for num in nums if num % 2 == 0]
+    with open(filename, 'w') as file:
+        json.dump(even_nums, file)
+
+def save_odd(nums, filename= 'odd.json'):
+    odd_nums = [num for num in nums if num % 2 != 0]
+    with open(filename, 'w') as file:
+        json.dump(odd_nums, file)
+
+def load_even(filename= 'even.json'):
+    with open(filename, 'r') as file:
+        even_nums = json.load(file)
+
+    print(f"even nums: {even_nums}")
+
+def load_odd(filename= 'odd.json'):
+    with open(filename, 'r') as file:
+        odd_nums = json.load(file)
+
+    print(f"odd nums: {odd_nums}")
+
+
+thread1 = threading.Thread(target=save_even, args=(nums,))
+thread2 = threading.Thread(target=save_odd, args=(nums,))
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
+load_even()
+load_odd()
 
 
 # Завдання 4
