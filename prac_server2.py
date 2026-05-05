@@ -70,7 +70,7 @@ def add_book(book: Book):
     books.append(new_book)
 
     with open('books.json', 'w') as file:
-        json.dump(books, file)
+        json.dump(books, file, indent=4)
 
 @app.delete("/book/{book_id}")
 def delete_book(book_id: int):
@@ -83,4 +83,4 @@ def delete_book(book_id: int):
             books.remove(book)
 
     with open('books.json', 'w') as file:
-        json.dump(books, file)
+        json.dump(books, file, indent=4)
