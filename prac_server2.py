@@ -71,3 +71,16 @@ def add_book(book: Book):
 
     with open('books.json', 'w') as file:
         json.dump(books, file)
+
+@app.delete("/book/{book_id}")
+def delete_book(book_id: int):
+    with open('books.json') as file:
+        books = json.load(file)
+
+    for book in books:
+        if book['id'] == book_id:
+            print(book)
+            books.remove(book)
+
+    with open('books.json', 'w') as file:
+        json.dump(books, file)
