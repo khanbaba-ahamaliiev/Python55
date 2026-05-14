@@ -1,0 +1,27 @@
+services:
+  app1:
+   build: .
+   image: rand-line
+   environment:
+     SYMBOL: +
+     MIN_LEN: 1
+     MAX_LEN: 10
+     DELAY: 1
+
+  app2:
+    build: .
+    image: rand-line
+    environment:
+        SYMBOL: 5
+        MIN_LEN: 5
+        MAX_LEN: 15
+        DELAY: 3
+
+  app3:
+    build: .
+    image: rand-line
+    environment:
+        SYMBOL: "*"
+        MIN_LEN: 10
+        MAX_LEN: 20
+        DELAY: 2

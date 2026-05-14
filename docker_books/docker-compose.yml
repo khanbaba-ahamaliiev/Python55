@@ -1,0 +1,10 @@
+services:
+  books1:
+    build: .
+    image: book-app
+
+    environment:
+      MAX_BOOKS: 5
+      DATA_FILE_PATH: "./books.json"
+    ports:
+    - 8081:8080

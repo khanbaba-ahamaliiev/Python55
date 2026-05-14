@@ -1,0 +1,10 @@
+services:
+  hello1:
+    image: hello
+    build: .
+
+    environment:
+      TEXT: "Hello, World!"
+
+    ports:
+      - 8001:8000

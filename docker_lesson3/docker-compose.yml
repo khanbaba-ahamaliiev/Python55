@@ -1,0 +1,25 @@
+# описание настроек контейнеров для запуска приложения
+
+services:
+  rand-num1:
+    image: rand-num
+    build: .
+
+    environment:
+      START_RANGE: 10
+      END_RANGE: 20
+
+#     чтение переменных окружения из файла .env
+    env_file:
+      - .env
+
+  rand-num2:
+      image: rand-num
+      build: .
+
+      environment:
+          START_RANGE: -100
+          END_RANGE: -50
+
+      env_file:
+          - .env
