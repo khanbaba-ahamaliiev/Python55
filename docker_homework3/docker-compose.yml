@@ -26,4 +26,4 @@ services:
         - "8082:8080"
 
     volumes:
-      - /films.json:/app/films.json
+      - ./films.json:/app/films.json
